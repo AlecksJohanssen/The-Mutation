@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/main_image_dial"
+        android:layout_width="280dp"
+        android:layout_height="320dp"
+        android:src="@drawable/dial"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cvDistance"
+        android:layout_above="@+id/linearLayout2" />
+
+    <ImageView
+        android:id="@+id/main_image_hands"
+        android:layout_width="20dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/hands"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvDistance"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:contentPadding="10dp">
+
+        <TextView
+            android:id="@+id/tvZone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+
+            android:text="Loading"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvDistance"
+        android:layout_marginTop="350dp"
+        android:id="@+id/linearLayout">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvSee"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:onClick="btnSeenUnseen"
+            android:foreground="@drawable/ripple_effect"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:contentPadding="10dp">
+
+            <TextView
+                android:id="@+id/tvSee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="I don't see any police"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="NotSibling"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="65dp"
+        android:id="@+id/linearLayout2">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvDontSee"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:onClick="btnSeenPressed"
+            android:foreground="@drawable/ripple_effect"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:contentPadding="10dp">
+            <TextView
+                android:id="@+id/tvDonSee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="I see police here"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+</RelativeLayout>
